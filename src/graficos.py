@@ -7,7 +7,7 @@ from defuzzificacao import agregar_saida
 
 
 def garantir_pasta_saida():
-    os.makedirs("docs/imagens", exist_ok=True)
+    os.makedirs("graficos", exist_ok=True)
 
 
 def plotar_pertinencia_umidade():
@@ -28,7 +28,7 @@ def plotar_pertinencia_umidade():
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("docs/imagens/pertinencia_umidade.png")
+    plt.savefig("graficos/pertinencia_umidade.png")
     plt.close()
 
 
@@ -50,7 +50,7 @@ def plotar_pertinencia_temperatura():
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("docs/imagens/pertinencia_temperatura.png")
+    plt.savefig("graficos/pertinencia_temperatura.png")
     plt.close()
 
 
@@ -72,7 +72,7 @@ def plotar_pertinencia_chuva():
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("docs/imagens/pertinencia_chuva.png")
+    plt.savefig("graficos/pertinencia_chuva.png")
     plt.close()
 
 
@@ -94,7 +94,7 @@ def plotar_pertinencia_saida():
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig("docs/imagens/pertinencia_saida.png")
+    plt.savefig("graficos/pertinencia_saida.png")
     plt.close()
 
 
@@ -123,7 +123,7 @@ def plotar_saida_agregada(regras: dict, valor_defuzzificado: float, nome_arquivo
     plt.grid(True)
     plt.legend()
     plt.tight_layout()
-    plt.savefig(f"docs/imagens/{nome_arquivo}")
+    plt.savefig(f"graficos/{nome_arquivo}")
     plt.close()
 
 
