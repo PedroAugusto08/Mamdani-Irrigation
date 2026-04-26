@@ -128,6 +128,21 @@ O sistema utiliza as seguintes regras:
 
 ---
 
+## Método de inferência
+
+O sistema utiliza o método de inferência fuzzy do tipo Mamdani, com as seguintes operações:
+
+- Operador AND → mínimo (min)
+- Agregação das saídas → máximo (max)
+- Defuzzificação → método do centroide:
+
+$$
+y^* = \frac{\sum x \cdot \mu(x)}{\sum \mu(x)}
+$$
+
+
+---
+
 ## Valores de entrada testados
 
 | Teste | Umidade | Temperatura | Chuva |
@@ -159,23 +174,13 @@ O sistema utiliza as seguintes regras:
 
 ## Saída fuzzy agregada
 
-A agregação é realizada utilizando o operador **max**, combinando todas as saídas das regras.
-
----
-
-## Defuzzificação
-
-Foi utilizado o método do centroide:
-
-
-$$
-y^* = \frac{\sum x \cdot \mu(x)}{\sum \mu(x)}
-$$
-
+A agregação combina as saídas de todas as regras, formando uma única função fuzzy de saída.
 
 ---
 
 ## Gráficos das funções de pertinência
+
+Os gráficos a seguir representam as funções de pertinência utilizadas para modelar as variáveis do sistema fuzzy.
 
 Arquivos:
 
@@ -290,4 +295,4 @@ python src/main.py
 
 ## Autor
 
-Pedro Augusto  
+Pedro Augusto Gontijo Moura
