@@ -94,6 +94,8 @@ Exemplo:
 $$
 \mu(x) =
 \begin{cases}
+1, & \text{se } a = b \text{ e } x \le b \\
+1, & \text{se } b = c \text{ e } x \ge b \\
 0, & \text{se } x \le a \text{ ou } x \ge c \\
 \dfrac{x - a}{b - a}, & \text{se } a < x < b \\
 \dfrac{c - x}{c - b}, & \text{se } b < x < c \\
